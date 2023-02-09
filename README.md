@@ -1,1 +1,1 @@
-# PDS-02
+# Repositório para aulas de práticas em desenvolvimento de sistemas 2
