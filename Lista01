@@ -1,0 +1,25 @@
+1-Pesquise e descreva: no contexto de programação, o que é uma “biblioteca” e o que é uma “API”? Diferencie ambas utilizando as suas próprias palavras.
+
+R:
+Biblioteca trata-se de uma coleção de recursos usados por programa de computador.
+API's são conjuntos de ferramentas, definições e protocolos para a criação de aplicações de software.
+
+Enquanto as APIs são usadas para permitir a comunicação entre diferentes sistemas ou aplicativos, as bibliotecas são usadas para fornecer funcionalidades específicas 
+em um programa e tornar o desenvolvimento mais eficiente ao reutilizar código já existente.
+
+2-Defina brevemente e descreva a razão para se utilizar os padrões de projetos abaixo:
+
+MVC
+R: MVC significa Model-View-Controller, é um padrão de arquitetura de software utilizado em muitos frameworks para desenvolvimento de aplicações web.
+
+DAO
+R:DAO significa Data Access Object, é um padrão de projeto de software utilizado para separar a camada de acesso a dados da camada de negócios ou lógica da aplicação.
+
+Singleton
+R:Singleton é um padrão de projeto de software que garante que uma classe tenha apenas uma instância e fornece um ponto global de acesso a essa instância em toda a aplicação.
+
+3-O que é JDBC e como ele se relaciona com bancos de dados e a programação em Java? 
+
+R:
+JDBC significa Java Database Connectivity, é uma API do Java que fornece uma interface para acesso a bancos de dados relacionais. O JDBC permite que os desenvolvedores 
+de software em Java escrevam aplicativos que possam interagir com vários bancos de dados, independentemente do tipo de banco de dados utilizado.
