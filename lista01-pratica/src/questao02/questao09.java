@@ -12,6 +12,7 @@ import java.sql.SQLException;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
+import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
 
@@ -77,24 +78,33 @@ public class questao09 extends JFrame implements ActionListener {
     }
     
     public void actionPerformed(ActionEvent e) {
+    	
         if (e.getSource() == botaoInserir) {
             String nome = campoNome.getText();
             String idade = campoIdade.getText();
             String email = campoEmail.getText();
 
             
-            try {
+            try {	
                 Connection conn = DriverManager.getConnection("jdbc:mysql://localhost/"+ databaseName +"?serverTimezone=UTC","root","aluno");
                 String sql = "INSERT INTO tabela1 (nome, idade, email) VALUES (?,?,?)";
                 PreparedStatement ps = conn.prepareStatement(sql);
                 ps.setString(1, nome);
                 ps.setString(2, idade);
                 ps.setString(3, email);
-                ps.executeUpdate();
+                final int i = ps.executeUpdate();
                 
-                conn.close();
+                if(i == 1) {
+                JOptionPane.showMessageDialog(null, "Cadastrado");
+                conn.close();	
+                dispose();
+                }else {
+                	JOptionPane.showMessageDialog(null, "Valor invalido, redigite");
+                }
+                
             } catch (SQLException ex) {
                 ex.printStackTrace();
+                JOptionPane.showMessageDialog(null, "Valor invalido, redigite");
             }
         }
     }
