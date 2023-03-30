@@ -14,9 +14,9 @@ public class resposta01 {
 			Connection conexao = DriverManager.getConnection("jdbc:mysql://localhost/"+ "?serverTimezone=UTC","root","aluno");
 			String queryCreateDatabase = "CREATE DATABASE"+ databaseName;
 			String queryCreateTable = "CREATE TABLE IF NOT EXISTS pessoa (\r\n"
-					+ " idpessoa int AUTO_INCREMENT PRIMARY KEY, \r\n"
-					+ " name VARCHAR(45) NOT NULL, \r\n"
-					+ " cpf VARCHAR(45) NOT NULL, \r\n"
+					+ " nome VARCHAR(50) AUTO_INCREMENT PRIMARY KEY, \r\n"
+					+ " idade INTEGER NOT NULL, \r\n"
+					+ " email VARCHAR(100) NOT NULL, \r\n"
 					+ ")";
 			Statement stm = conexao.createStatement();
 			stm.executeQuery(queryCreateDatabase);
@@ -29,3 +29,5 @@ public class resposta01 {
 		
 	}
 }
+,
+,
